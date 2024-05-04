@@ -8,7 +8,9 @@ body {
 #intro {
     background-image: url("./assets/Section-1.png");
     background-repeat: no-repeat;
+    width: 100%;
     height: 600px;
+    background-size: 100% 100%;
 }
 
 .introHead {
@@ -33,18 +35,23 @@ body {
 #desc {
     background-image: url("./assets/Section-2.png");
     background-repeat: no-repeat;
+    /* background-size: contain;
+    height: 600px; */
+    width: 100%;
     height: 600px;
+    background-size: 100% 100%;
 }
 
 .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .desc-grid-container {
     display: grid;
-    grid-template-columns: 30.875rem;
+    grid-template-columns: auto;
     grid-template-rows: 10rem auto auto;
 }
 
@@ -71,10 +78,12 @@ body {
 
 #education {
     background-image: url("./assets/Section-3.png");
-    height: 650px;
+    background-size: 100% 100%;
+    padding-bottom: 50px;
 }
 
-.education-flex-container {
+.education-flex-container,
+.skills-flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +99,7 @@ body {
 }
 
 .education-grid-item>div>img {
-    width: 100px;
+    width: 6.25rem;
 
 }
 
@@ -108,4 +117,88 @@ body {
 
 .education-grid-item-2>p {
     margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Section-4 */
+
+#skills {
+    background-image: url("./assets/Mob/Section-4-Mob.gif");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 11rem;
+    border: 2px solid #1E0342;
+    border-radius: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 30px;
+}
+
+.skills-container:hover {
+    background-color: #E1F7F5;
+    rotate: 2deg;
+}
+
+.skills-container>img {
+    width: 4rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #intro {
+        background-image: url("./assets/Mob/Section-1-Mob.png");
+        /* height: 400px */
+    }
+
+    #desc {
+        background-image: url("./assets/Mob/Section-2-Mob.png");
+    }
+
+    .introHead {
+        top: 31%;
+    }
+
+    .education-grid-container {
+        column-gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    #skills {
+        background-image: url("./assets/Section-4.gif");
+    }
+
+    .skills-grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 40px;
+    }
+
+    .skills-container {
+        width: 7rem;
+        height: 10rem;
+    }
+
+    .skills-container>img {
+        width: 4rem;
+    }
+
 }
