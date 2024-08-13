@@ -12,8 +12,34 @@ body {
   height: 600px;
   background-size: 100% 100%;
   cursor: default;
+  position: relative;
 }
+#intro div:nth-child(2) {
 
+  position: absolute;
+  font-size: 50px;
+  color:#1e0342;
+  top: 1em;
+  left: 8em;
+  transform: rotate(35deg);
+  animation: intro-blink 2s forwards infinite, intro-blink2 2s infinite;
+  animation-direction: alternate;
+  transition: 1s;
+}
+@keyframes intro-blink {
+  from{
+    transform: scale(1);
+  }to {
+    transform: scale(.9);
+  }
+}
+@keyframes intro-blink2 { 
+  from{
+    transform: scale(.9);
+  }to {
+    transform: scale(1);
+  }
+}
 .introHead {
   position: relative;
   top: 25%;
@@ -79,6 +105,7 @@ body {
   border: 2px solid #e1f7f5;
   width: 10rem;
   height: 10rem;
+  box-shadow: 5px 5px 10px white;
 }
 
 .desc-details {
@@ -183,6 +210,7 @@ body {
   border-radius: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
+  box-shadow: 5px 5px 20px grey,inset -5px -5px 20px teal;
 }
 .skills-container > div {
     font-weight: bold;
