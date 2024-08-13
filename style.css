@@ -15,28 +15,29 @@ body {
   position: relative;
 }
 #intro div:nth-child(2) {
-
   position: absolute;
-  font-size: 50px;
-  color:#1e0342;
+  font-size: 3em;
+  color: #1e0342;
   top: 1em;
   left: 8em;
-  transform: rotate(35deg);
+  transform: rotate(90deg);
   animation: intro-blink 2s forwards infinite, intro-blink2 2s infinite;
   animation-direction: alternate;
   transition: 1s;
 }
 @keyframes intro-blink {
-  from{
+  from {
     transform: scale(1);
-  }to {
-    transform: scale(.9);
+  }
+  to {
+    transform: scale(0.9);
   }
 }
-@keyframes intro-blink2 { 
-  from{
-    transform: scale(.9);
-  }to {
+@keyframes intro-blink2 {
+  from {
+    transform: scale(0.9);
+  }
+  to {
     transform: scale(1);
   }
 }
@@ -47,13 +48,14 @@ body {
   /* transition: 3s; */
 }
 @keyframes intro-animi {
-    from{
-        transform: translateX(-1000px);
-        opacity: 0;
-    }to {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .introName {
@@ -112,7 +114,7 @@ body {
   font-size: 1rem;
 }
 
-.heart{
+.heart {
   display: inline-block;
   animation: heart 1s, heart-back 1s;
   animation-iteration-count: infinite;
@@ -121,20 +123,20 @@ body {
   /* transition: 5s; */
 }
 @keyframes heart {
-   0%{
+  0% {
     transform: scale(1);
-   }
-   100%{
+  }
+  100% {
     transform: scale(2);
-   }
-} 
+  }
+}
 @keyframes heart-back {
-    0%{
-        transform: scale(1.5);
-       }
-       100%{
-        transform: scale(1);
-       }
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /* Section-3  */
 
@@ -165,9 +167,9 @@ body {
   width: 6.25rem;
 }
 .education-grid-item > div > img:hover {
-    transform: scale(.9);
-    transition: 0.5s;
-  }
+  transform: scale(0.9);
+  transition: 0.5s;
+}
 
 .education-grid-item {
   display: flex;
@@ -195,7 +197,7 @@ body {
   background-size: contain;
   width: 100%;
   height: auto;
-  background-size: cover;  
+  background-size: cover;
   cursor: default;
 }
 
@@ -210,11 +212,11 @@ body {
   border-radius: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 20px grey,inset -5px -5px 20px teal;
+  box-shadow: 5px 5px 20px grey, inset -5px -5px 20px teal;
 }
 .skills-container > div {
-    font-weight: bold;
-    color: #1e0342;
+  font-weight: bold;
+  color: #1e0342;
 }
 .skills-grid-container {
   display: grid;
@@ -233,10 +235,10 @@ body {
 /* .skills-container > img {
   width: 4rem;
 } */
-.skills-container>i {
-    font-size: 3rem;
-    font-weight: bold;
-    color:#1e0342;
+.skills-container > i {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e0342;
 }
 .skills-heading {
   font-size: 20px;
@@ -250,6 +252,11 @@ body {
   #intro {
     background-image: url("./assets/Mob/Section-1-Mob.png");
     /* height: 400px */
+  }
+  #intro div:nth-child(2) {
+    font-size: 2em;
+    top: 1em;
+    left: 3em;
   }
 
   #desc {
